@@ -3,18 +3,21 @@
 ## Executive read
 
 In roughly 60 seconds, this repository proves that the author can implement and
-test push-aware Asian-handicap arithmetic while maintaining a deliberate boundary
-between public portfolio code and private production IP.
+test push-aware Asian-handicap arithmetic, validated odds conversions, and generic
+fractional-Kelly math while maintaining a deliberate boundary between public
+portfolio code and private production IP.
 
 The publication boundary is unusually clear. The README and
 `docs/publication-scope.md` explicitly exclude live data, model design, parameters,
-selection and staking logic, prices, projections, results, and credentials. A
+selection logic, production staking settings, prices, projections, results, and credentials. A
 basic text scan found no obvious embedded secrets or connection strings.
 
 ## What is already credible
 
 - Fabricated grids and examples instead of disguised production data.
 - Tests for pick'em, whole, half, and quarter lines.
+- Known-value and round-trip tests for probability, decimal, and American odds.
+- An explicit Kelly multiplier rather than a hard-coded production setting.
 - A clear `.gitignore` covering secrets, environments, data, outputs, and model
   artifacts.
 - A small enough code surface for a reviewer to understand quickly.
@@ -33,17 +36,17 @@ These are review findings, not claims that the private model is wrong.
    non-negativity, or total mass. Silent bad inputs could produce plausible output.
 3. `max_goals` can silently truncate probability mass. Any truncation should be
    explicit and checked.
-4. `prob_to_american` clamps invalid probabilities instead of failing fast, and
-   `american_to_prob` accepts zero even though American odds of zero are invalid.
-5. The suite has no direct tests for the odds conversion helpers, invalid inputs,
-   rectangular grids, truncated grids, or floating-point line normalization.
+4. The odds helpers now fail fast on invalid and non-finite values, but the suite
+   does not yet include property-based testing across a generated price range.
+5. The suite still lacks tests for rectangular grids, truncated grids, or
+   floating-point line normalization.
 
 ## Hiring-manager gaps, in priority order
 
 1. Add explicit input contracts and negative tests for invalid probability grids.
 2. Separate `win`, `push`, `loss`, `half-win`, and `half-loss` settlement outcomes;
    calculate a quoted fair price only in a separately documented pricing function.
-3. Add tests for `odds_utils.py`, including round-trip tolerances and rejected inputs.
+3. Add property-based odds tests across generated valid prices.
 4. Move toward a conventional importable package plus a top-level `tests/` folder.
 5. Add one small benchmark or property-based test showing invariants across many
    synthetic grids.
