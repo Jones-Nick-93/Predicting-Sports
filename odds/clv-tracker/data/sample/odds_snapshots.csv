@@ -1,0 +1,10 @@
+captured_at_utc,event_id,starts_at_utc,sportsbook,market_type,selection,line,american_odds,snapshot_role
+2026-07-10T12:00:00Z,SYN-001,2026-07-10T19:00:00Z,Book Alpha,moneyline,Metro FC,,+125,entry
+2026-07-10T18:45:00Z,SYN-001,2026-07-10T19:00:00Z,Book Alpha,moneyline,Metro FC,,+105,close
+2026-07-10T12:02:00Z,SYN-001,2026-07-10T19:00:00Z,Book Beta,moneyline,Metro FC,,+120,entry
+2026-07-10T18:43:00Z,SYN-001,2026-07-10T19:00:00Z,Book Beta,moneyline,Metro FC,,+100,close
+2026-07-10T12:00:00Z,SYN-001,2026-07-10T19:00:00Z,Book Alpha,total_goals,Over,2.5,-105,entry
+2026-07-10T18:45:00Z,SYN-001,2026-07-10T19:00:00Z,Book Alpha,total_goals,Over,2.5,-120,close
+2026-07-10T13:00:00Z,SYN-002,2026-07-10T21:00:00Z,Book Alpha,asian_handicap,Harbor United,+0.5,-110,entry
+2026-07-10T18:10:00Z,SYN-002,2026-07-10T21:00:00Z,Book Alpha,asian_handicap,Harbor United,+0.5,-115,close
+2026-07-10T13:05:00Z,SYN-002,2026-07-10T21:00:00Z,Book Beta,asian_handicap,Harbor United,+0.5,-108,entry
