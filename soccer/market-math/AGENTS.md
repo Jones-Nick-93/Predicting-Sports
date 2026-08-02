@@ -10,7 +10,7 @@ into a reproduction of that system.
 
 - Keep the exclusions in `docs/publication-scope.md` authoritative.
 - Never add real fixtures, prices, projections, results, account information,
-  bankroll or staking rules, data-source details, production parameters,
+  bankroll values, production staking rules, data-source details, production parameters,
   credentials, endpoints, serialized models, or private-system architecture.
 - Use only small, fabricated inputs in examples and tests.
 - Do not infer or reconstruct withheld private logic from surrounding files.
@@ -20,6 +20,8 @@ into a reproduction of that system.
 - Inspect the relevant files before editing.
 - Prefer the smallest coherent change; do not expand scope without explaining why.
 - Preserve pure, deterministic market-math functions.
+- Generic Kelly arithmetic may accept an explicit caller-supplied multiplier, but
+  must not encode a production multiplier, bankroll, cap, limit, or bet-selection rule.
 - Treat probability grids as untrusted inputs when adding public APIs: validate
   shape, finiteness, non-negativity, and normalization explicitly.
 - Keep settlement quantities clearly named. Do not label a push-adjusted score as

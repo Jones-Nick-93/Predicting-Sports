@@ -14,9 +14,26 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from asian_handicap import cover_prob, spread_labels
+from odds_utils import american_to_decimal, fractional_kelly, probability_to_american
 
 
 def main() -> None:
+    synthetic_probability = 0.55
+    synthetic_american_odds = -110
+    decimal_odds = american_to_decimal(synthetic_american_odds)
+    fair_price = probability_to_american(synthetic_probability)
+    demonstration_fraction = fractional_kelly(
+        synthetic_probability,
+        decimal_odds,
+        multiplier=0.25,
+    )
+    print(
+        "Synthetic conversion: "
+        f"p={synthetic_probability:.2f}, fair={fair_price:+.1f}, "
+        f"market_decimal={decimal_odds:.4f}, "
+        f"quarter-Kelly example={demonstration_fraction:.4f}"
+    )
+
     grid = np.array(
         [
             [0.18, 0.12, 0.05],
