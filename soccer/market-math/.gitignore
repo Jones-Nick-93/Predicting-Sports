@@ -1,0 +1,17 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.*
+*.pkl
+*.pickle
+*.joblib
+data/
+models/
+outputs/
+.DS_Store

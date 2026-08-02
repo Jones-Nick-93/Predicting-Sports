@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+artifacts/
+data/private/
+data/raw/
+*.sqlite3
+*.db
