@@ -22,6 +22,12 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   walk-forward splits, embargoes, as-of feature joins, calibration diagnostics,
   bootstrap uncertainty, and realistic execution filters.
 
+### Statistical governance
+
+- [`statistics/experiment-governance`](statistics/experiment-governance) — fixed
+  experiment-family registration, complete trial retention, Bonferroni/Holm
+  corrections, weighted-sample diagnostics, and paired sign-flip inference.
+
 ### Data engineering
 
 - [`data/production-pipeline`](data/production-pipeline) — immutable payload
