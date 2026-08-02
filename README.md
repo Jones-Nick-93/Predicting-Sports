@@ -5,6 +5,13 @@ testing, and quantitative reasoning without publishing private forecasting IP.
 
 ## Projects
 
+### Baseball
+
+- [`baseball/mlb-simulation-engine`](baseball/mlb-simulation-engine) — seeded
+  plate-appearance simulation with regulation and extra-inning accounting,
+  starter-to-bullpen workload transitions, a shared event ledger, stable player
+  identifiers, and push-aware pricing across game and player markets.
+
 ### Soccer
 
 - [`soccer/market-math`](soccer/market-math) — tested American-odds conversion and

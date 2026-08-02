@@ -1,0 +1,23 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Private or licensed inputs
+data/raw/
+data/vendor/
+data/private/
+*.duckdb
+*.sqlite
+*.db
+
+# Generated model outputs
+outputs/
+projections*.json
+logs/
