@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+output/
+data/
+*.xlsx
+*.bak
+.env
+config.py

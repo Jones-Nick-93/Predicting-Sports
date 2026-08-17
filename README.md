@@ -43,6 +43,10 @@ testing, and quantitative reasoning without publishing private forecasting IP.
 
 ### Data engineering
 
+- [`data/master-append`](data/master-append) — explicit reconciliation modes,
+  idempotent snapshot handling, schema alignment, recoverable Excel writes, and
+  deterministic workbook tests.
+
 - [`data/production-pipeline`](data/production-pipeline) — immutable payload
   checksums, row quarantine, idempotent SQLite writes, bounded retries, structured
   run telemetry, deduplicated alerts, and health/readiness API behavior.

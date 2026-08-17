@@ -1,0 +1,36 @@
+name: Master Append
+
+on:
+  push:
+    paths:
+      - "data/master-append/**"
+      - ".github/workflows/master-append.yml"
+  pull_request:
+    paths:
+      - "data/master-append/**"
+      - ".github/workflows/master-append.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: data/master-append
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: data/master-append/pyproject.toml
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m pytest
+      - run: python -m compileall -q master_append.py test_master_append.py examples
+      - run: python examples/run_demo.py
