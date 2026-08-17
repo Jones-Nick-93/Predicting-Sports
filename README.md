@@ -23,6 +23,9 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   market normalization, feed-health checks, entry-versus-close reporting, and a
   static HTML dashboard.
 
+- [`odds/market-invariants`](odds/market-invariants) — property-based tests for
+  probability, odds, devig, alternate-line, and generic Kelly arithmetic.
+
 ### Evaluation
 
 - [`backtesting/leakage-safe-lab`](backtesting/leakage-safe-lab) — expanding
