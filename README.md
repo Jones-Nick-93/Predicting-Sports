@@ -35,6 +35,11 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   experiment-family registration, complete trial retention, Bonferroni/Holm
   corrections, weighted-sample diagnostics, and paired sign-flip inference.
 
+### Machine learning
+
+- [`ml/asof-news-nlp`](ml/asof-news-nlp) — bitemporal synthetic-news modeling
+  that contrasts an as-of-safe classifier with an intentionally leaky event join.
+
 ### Data engineering
 
 - [`data/production-pipeline`](data/production-pipeline) — immutable payload
