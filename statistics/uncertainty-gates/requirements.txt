@@ -1,0 +1,5 @@
+numpy>=1.26,<3
+scikit-learn>=1.5,<2
+mapie>=1.5,<2
+ngboost>=0.5,<0.6
+

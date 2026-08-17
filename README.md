@@ -35,6 +35,9 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   experiment-family registration, complete trial retention, Bonferroni/Holm
   corrections, weighted-sample diagnostics, and paired sign-flip inference.
 
+- [`statistics/uncertainty-gates`](statistics/uncertainty-gates) — time-ordered
+  prediction intervals, regime-aware coverage diagnostics, and explicit abstention.
+
 ### Data engineering
 
 - [`data/production-pipeline`](data/production-pipeline) — immutable payload
