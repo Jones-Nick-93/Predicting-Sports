@@ -47,6 +47,10 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   checksums, row quarantine, idempotent SQLite writes, bounded retries, structured
   run telemetry, deduplicated alerts, and health/readiness API behavior.
 
+- [`data/resilient-api-client`](data/resilient-api-client) — bounded retries,
+  one-time token refresh, conflict-aware creates, host-safe relative paths, and
+  dry-run deletion gates exercised through a fake transport.
+
 ## Publication boundary
 
 Every project in this repository is intended for public portfolio use. It must exclude
