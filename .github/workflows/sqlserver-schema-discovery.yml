@@ -1,0 +1,31 @@
+name: SQL Server schema discovery
+
+on:
+  push:
+    paths:
+      - "data/sqlserver-schema-discovery/**"
+      - ".github/workflows/sqlserver-schema-discovery.yml"
+  pull_request:
+    paths:
+      - "data/sqlserver-schema-discovery/**"
+      - ".github/workflows/sqlserver-schema-discovery.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: data/sqlserver-schema-discovery
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m unittest -v tests/test_public_safety.py
+      - run: python -m compileall -q tests

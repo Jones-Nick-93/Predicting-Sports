@@ -43,6 +43,10 @@ testing, and quantitative reasoning without publishing private forecasting IP.
 
 ### Data engineering
 
+- [`data/master-append`](data/master-append) — explicit reconciliation modes,
+  idempotent snapshot handling, schema alignment, recoverable Excel writes, and
+  deterministic workbook tests.
+
 - [`data/production-pipeline`](data/production-pipeline) — immutable payload
   checksums, row quarantine, idempotent SQLite writes, bounded retries, structured
   run telemetry, deduplicated alerts, and health/readiness API behavior.
@@ -50,6 +54,11 @@ testing, and quantitative reasoning without publishing private forecasting IP.
 - [`data/resilient-api-client`](data/resilient-api-client) — bounded retries,
   one-time token refresh, conflict-aware creates, host-safe relative paths, and
   dry-run deletion gates exercised through a fake transport.
+### Database discovery
+
+- [`data/sqlserver-schema-discovery`](data/sqlserver-schema-discovery) — read-only,
+  parameterized SQL templates for bounded schema investigation with static public-
+  safety contracts and explicit query-cost limitations.
 
 ## Publication boundary
 
