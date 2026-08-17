@@ -47,6 +47,12 @@ testing, and quantitative reasoning without publishing private forecasting IP.
   checksums, row quarantine, idempotent SQLite writes, bounded retries, structured
   run telemetry, deduplicated alerts, and health/readiness API behavior.
 
+### Database discovery
+
+- [`data/sqlserver-schema-discovery`](data/sqlserver-schema-discovery) — read-only,
+  parameterized SQL templates for bounded schema investigation with static public-
+  safety contracts and explicit query-cost limitations.
+
 ## Publication boundary
 
 Every project in this repository is intended for public portfolio use. It must exclude

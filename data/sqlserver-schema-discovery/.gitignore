@@ -1,0 +1,6 @@
+*.log
+.env
+config.sql
+local_*
+__pycache__/
+*.py[cod]
